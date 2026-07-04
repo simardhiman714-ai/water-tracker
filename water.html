@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WATER TRACKER</title>
+  <link rel="stylesheet" href="water.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <div class="bubbles">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+<div class="drop d1"></div>
+<div class="drop d2"></div>
+<div class="drop d3"></div>
+<div class="drop d4"></div>
+
+<div class="wave"></div>
+  <div class="container">
+    <header>
+      <h1><i class="fa-solid fa-glass-water"></i>WATER TRACKER</h1>
+      <button id="themebtn"><i class="fa-solid fa-moon"></i></button>
+    </header>
+    <div class="date">
+      <p id="currentdate"></p>
+    </div>
+    <section class="goal-card">
+      <h2>Dailygoal</h2>
+      <h3>2000ml</h3>
+      <p id="goalStatus">Keep Going 💧</p>
+    </section>
+    <section class="progress-section">
+      <div class="progress-circle">
+        <svg width="220" height="220">
+          <circle
+            class="bg"
+            cx="110"
+         cy="110"
+                r="90"></circle>
+
+                <circle
+                class="progress"
+                cx="110"
+                cy="110"
+                r="90"></circle>
+
+            </svg>
+            <section class="quick-stats">
+
+    <div class="stat">
+        <h3>🥛 Glasses</h3>
+        <p id="glassCount">0 / 8</p>
+    </div>
+
+    <div class="stat">
+        <h3>🔥 Streak</h3>
+        <p id="streak">0 Days</p>
+    </div>
+
+    <div class="stat">
+        <h3>🏆 Badge</h3>
+        <p id="badge">Beginner</p>
+    </div>
+
+</section>
+
+            <div class="progress-text">
+
+                <h2 id="waterAmount">0 ml</h2>
+
+                <p id="percentage">0%</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    
+
+    <section class="buttons">
+
+        <button class="addWater" data-value="250">
+            +250 ml
+        </button>
+
+        <button class="addWater" data-value="500">
+            +500 ml
+        </button>
+
+        <button class="addWater" data-value="1000">
+            +1000 ml
+        </button>
+
+        <button id="undoBtn">
+            -250 ml
+        </button>
+
+        <button id="resetBtn">
+            Reset
+        </button>
+
+    </section>
+
+    <!-- Summary -->
+
+    <section class="summary">
+
+        <h2>Today's Summary</h2>
+
+        <div class="summary-box">
+
+            <div>
+
+                <h3>Total Intake</h3>
+
+                <p id="totalIntake">0 ml</p>
+
+            </div>
+
+            <div>
+
+                <h3>Remaining</h3>
+
+                <p id="remainingWater">2000 ml</p>
+
+            </div>
+
+        </div>
+<section class="history">
+
+<h2>Today's History</h2>
+
+<ul id="historyList"></ul>
+
+</section>
+
+    </section>
+
+
+    <!-- Hydration Tip -->
+
+    <section class="tips">
+
+        <h2>Hydration Tip</h2>
+
+        <p id="tip">
+            Drink water regularly to stay healthy.
+        </p>
+
+    </section>
+
+    <!-- Reminder -->
+
+    <section class="reminder">
+
+        <h2>Water Reminder</h2>
+
+        <label>Reminder Time</label>
+
+        <input type="time" id="alarmTime">
+
+        <label>Repeat Every</label>
+
+        <select id="interval">
+
+            <option value="30">
+                30 Minutes
+            </option>
+
+            <option value="60">
+                1 Hour
+            </option>
+
+            <option value="120">
+                2 Hours
+            </option>
+
+        </select>
+
+        <div class="alarm-buttons">
+
+            <button id="setAlarm">
+                Set Reminder
+            </button>
+
+            <button id="stopAlarm">
+                Stop
+            </button>
+
+            <button id="snoozeAlarm">
+                Snooze
+            </button>
+
+        </div>
+
+    </section>
+
+    
+
+    <section class="chart-section">
+
+        <h2>Weekly Analytics</h2>
+
+        <canvas id="waterChart"></canvas>
+
+    </section>
+
+    
+
+    <footer>
+
+        <p>
+            Stay Hydrated 💙
+        </p>
+
+    </footer>
+<section class="quote">
+
+<p id="quote">
+💧 Water is the driving force of life.
+</p>
+
+</section>
+</div>
+
+<script src="water.js"></script>
+
+</body>
+</html>
+
